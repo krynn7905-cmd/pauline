@@ -1441,9 +1441,8 @@ function renderDesignCards(designs, grid) {
   grid.innerHTML = designs.map(d => `
     <div class="design-card animate-up" data-cat="${d.category}" id="card-${d.id}">
       <div class="design-card-image">
-        <div class="design-visual">
-          <img src="${d.image}" style="width:100%; height:100%; object-fit:cover;" alt="${d.name}"
-            onerror="this.parentElement.style.background='linear-gradient(135deg,var(--blush),var(--nude))'">
+        <div class="design-visual"><img src="${d.image}" 
+onerror="this.src='images/fallback.jpg'">
         </div>
         <div class="design-overlay"></div>
         <div class="design-badge-card">KES ${d.price.toLocaleString()}</div>
